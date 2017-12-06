@@ -40,5 +40,21 @@ def turn(count, brake=2, dir=False, step=hands_step):  # at brake=1 steps are mi
 		print "no turns"
 
 
+def up(id, s):
+	# for testing, keep output <id> up for <s> s
+	# if s = 0, keep up until interrupted
+	GPIO.output(id, True)
+	if s:
+		time.sleep(s)
+		GPIO.output(id, False)
+	else:
+		try:
+			while True:
+				pass
+		except KeyboardInterrupt:
+			GPIO.output(id, False)
+			print 'Interrupted!'
+
+
 init()
 
