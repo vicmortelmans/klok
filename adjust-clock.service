@@ -1,0 +1,10 @@
+[Unit]
+Description=Adjust Grandma's clock
+
+[Service]
+ExecStart=/usr/bin/python /home/pi/Public/klok/server.py
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target

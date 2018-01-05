@@ -13,12 +13,12 @@ def adjust_clock():
   offset_file.seek(0)
   offset_string = offset_file.read()
   offset = int(offset_string)
-  if 'forward' in direction:
-    offset += minutes
-    dir = False
-  else:
+  if 'back' in direction:
     offset -= minutes
     dir = True
+  else:
+    offset += minutes
+    dir = False
   offset_string = str(offset)
   offset_file.seek(0)
   offset_file.truncate()

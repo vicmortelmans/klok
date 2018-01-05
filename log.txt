@@ -26515,3 +26515,418 @@ Calibration offset: -8 -> 0; calibration: 25241357.3667 -> 25252754.8833; correc
 running behind 0.0000 steps before turn
 running behind 0.0343 steps without correction
 1.0000 turns, 513 steps took 2 seconds
+hands = 257
+time = 258
+target position is 4 hours and 18 minutes
+hands.txt is '04:17
+'
+current position of the hands is 4 hours and 17 minutes
+going to move the hands 1 minutes
+running behind 0.9662 steps before turn
+running behind 1.4057 steps without correction
+running behind 0.4057 steps after correction
+0.1159 turns, 60 steps took 1 seconds
+moved hands
+hands.txt is '04:18'
+cumul_float_minutes is 1435.0000
+cumul_float_steps is 85355.4057
+cumul_actual_steps is 84665
+59.43945593 steps per minute
+1.05776298 correction
+hands = 258
+time = 259
+target position is 4 hours and 19 minutes
+hands.txt is '04:18
+'
+current position of the hands is 4 hours and 18 minutes
+going to move the hands 1 minutes
+running behind 0.4057 steps before turn
+running behind 0.8451 steps without correction
+0.1159 turns, 59 steps took 1 seconds
+moved hands
+hands.txt is '04:19'
+cumul_float_minutes is 1436.0000
+cumul_float_steps is 85414.8451
+cumul_actual_steps is 84724
+59.43945593 steps per minute
+1.05776298 correction
+hands = 259
+time = 260
+target position is 4 hours and 20 minutes
+hands.txt is '04:19
+'
+current position of the hands is 4 hours and 19 minutes
+going to move the hands 1 minutes
+running behind 0.8451 steps before turn
+running behind 1.2846 steps without correction
+running behind 0.2846 steps after correction
+0.1159 turns, 60 steps took 1 seconds
+moved hands
+hands.txt is '04:20'
+cumul_float_minutes is 1437.0000
+cumul_float_steps is 85474.2846
+cumul_actual_steps is 84783
+59.43945593 steps per minute
+1.05776298 correction
+hands = 260
+time = 261
+target position is 4 hours and 21 minutes
+hands.txt is '04:20
+'
+current position of the hands is 4 hours and 20 minutes
+going to move the hands 1 minutes
+running behind 0.2846 steps before turn
+running behind 0.7240 steps without correction
+0.1159 turns, 59 steps took 1 seconds
+moved hands
+hands.txt is '04:21'
+cumul_float_minutes is 1438.0000
+cumul_float_steps is 85533.7240
+cumul_actual_steps is 84842
+59.43945593 steps per minute
+1.05776298 correction
+hands = 261
+time = 262
+target position is 4 hours and 22 minutes
+hands.txt is '04:21
+'
+current position of the hands is 4 hours and 21 minutes
+going to move the hands 1 minutes
+running behind 0.7240 steps before turn
+running behind 1.1635 steps without correction
+running behind 0.1635 steps after correction
+0.1159 turns, 60 steps took 1 seconds
+moved hands
+hands.txt is '04:22'
+cumul_float_minutes is 1439.0000
+cumul_float_steps is 85593.1635
+cumul_actual_steps is 84901
+59.43945593 steps per minute
+1.05776298 correction
+hands = 262
+time = 263
+target position is 4 hours and 23 minutes
+hands.txt is '04:22
+'
+current position of the hands is 4 hours and 22 minutes
+going to move the hands 1 minutes
+running behind 0.1635 steps before turn
+running behind 0.6030 steps without correction
+0.1159 turns, 59 steps took 1 seconds
+moved hands
+hands.txt is '04:23'
+cumul_float_minutes is 1440.0000
+cumul_float_steps is 85652.6030
+cumul_actual_steps is 84960
+59.43945593 steps per minute
+1.05776298 correction
+hands = 263
+time = 264
+target position is 4 hours and 24 minutes
+hands.txt is '04:23
+'
+current position of the hands is 4 hours and 23 minutes
+going to move the hands 1 minutes
+running behind 0.6030 steps before turn
+running behind 1.0424 steps without correction
+running behind 0.0424 steps after correction
+0.1159 turns, 60 steps took 1 seconds
+moved hands
+hands.txt is '04:24'
+cumul_float_minutes is 1441.0000
+cumul_float_steps is 85712.0424
+cumul_actual_steps is 85019
+59.43945593 steps per minute
+1.05776298 correction
+hands = 264
+time = 265
+target position is 4 hours and 25 minutes
+hands.txt is '04:24
+'
+current position of the hands is 4 hours and 24 minutes
+going to move the hands 1 minutes
+running behind 0.0424 steps before turn
+running behind 0.4819 steps without correction
+0.1159 turns, 59 steps took 1 seconds
+moved hands
+hands.txt is '04:25'
+cumul_float_minutes is 1442.0000
+cumul_float_steps is 85771.4819
+cumul_actual_steps is 85078
+59.43945593 steps per minute
+1.05776298 correction
+hands = 265
+time = 266
+target position is 4 hours and 26 minutes
+hands.txt is '04:25
+'
+current position of the hands is 4 hours and 25 minutes
+going to move the hands 1 minutes
+running behind 0.4819 steps before turn
+running behind 0.9213 steps without correction
+0.1159 turns, 59 steps took 1 seconds
+moved hands
+hands.txt is '04:26'
+cumul_float_minutes is 1443.0000
+cumul_float_steps is 85830.9213
+cumul_actual_steps is 85137
+59.43945593 steps per minute
+1.05776298 correction
+hands = 266
+time = 267
+target position is 4 hours and 27 minutes
+hands.txt is '04:26
+'
+current position of the hands is 4 hours and 26 minutes
+going to move the hands 1 minutes
+running behind 0.9213 steps before turn
+running behind 1.3608 steps without correction
+running behind 0.3608 steps after correction
+0.1159 turns, 60 steps took 1 seconds
+moved hands
+hands.txt is '04:27'
+cumul_float_minutes is 1444.0000
+cumul_float_steps is 85890.3608
+cumul_actual_steps is 85196
+59.43945593 steps per minute
+1.05776298 correction
+hands = 267
+time = 268
+target position is 4 hours and 28 minutes
+hands.txt is '04:27
+'
+current position of the hands is 4 hours and 27 minutes
+going to move the hands 1 minutes
+running behind 0.3608 steps before turn
+running behind 0.8002 steps without correction
+0.1159 turns, 59 steps took 1 seconds
+moved hands
+hands.txt is '04:28'
+cumul_float_minutes is 1445.0000
+cumul_float_steps is 85949.8002
+cumul_actual_steps is 85255
+59.43945593 steps per minute
+1.05776298 correction
+hands = 268
+time = 269
+target position is 4 hours and 29 minutes
+hands.txt is '04:28
+'
+current position of the hands is 4 hours and 28 minutes
+going to move the hands 1 minutes
+running behind 0.8002 steps before turn
+running behind 1.2397 steps without correction
+running behind 0.2397 steps after correction
+0.1159 turns, 60 steps took 1 seconds
+moved hands
+hands.txt is '04:29'
+cumul_float_minutes is 1446.0000
+cumul_float_steps is 86009.2397
+cumul_actual_steps is 85314
+59.43945593 steps per minute
+1.05776298 correction
+hands = 269
+time = 270
+target position is 4 hours and 30 minutes
+hands.txt is '04:29
+'
+current position of the hands is 4 hours and 29 minutes
+going to move the hands 1 minutes
+running behind 0.2397 steps before turn
+running behind 0.6791 steps without correction
+0.1159 turns, 59 steps took 1 seconds
+moved hands
+hands.txt is '04:30'
+cumul_float_minutes is 1447.0000
+cumul_float_steps is 86068.6791
+cumul_actual_steps is 85373
+59.43945593 steps per minute
+1.05776298 correction
+hands = 270
+time = 271
+target position is 4 hours and 31 minutes
+hands.txt is '04:30
+'
+current position of the hands is 4 hours and 30 minutes
+going to move the hands 1 minutes
+running behind 0.6791 steps before turn
+running behind 1.1186 steps without correction
+running behind 0.1186 steps after correction
+0.1159 turns, 60 steps took 1 seconds
+moved hands
+hands.txt is '04:31'
+cumul_float_minutes is 1448.0000
+cumul_float_steps is 86128.1186
+cumul_actual_steps is 85432
+59.43945593 steps per minute
+1.05776298 correction
+going to sound 2 chimes
+running behind 0.1160 steps before turn
+running behind 0.6332 steps without correction
+0.5000 turns, 256 steps took 4 seconds
+running behind 0.6332 steps before turn
+running behind 1.1503 steps without correction
+running behind 0.1503 steps after correction
+0.5000 turns, 257 steps took 4 seconds
+hands = 271
+time = 272
+target position is 4 hours and 32 minutes
+hands.txt is '04:31
+'
+current position of the hands is 4 hours and 31 minutes
+going to move the hands 1 minutes
+running behind 0.1186 steps before turn
+running behind 0.5581 steps without correction
+0.1159 turns, 59 steps took 1 seconds
+moved hands
+hands.txt is '04:32'
+cumul_float_minutes is 1449.0000
+cumul_float_steps is 86187.5581
+cumul_actual_steps is 85491
+59.43945593 steps per minute
+1.05776298 correction
+hands = 272
+time = 273
+target position is 4 hours and 33 minutes
+hands.txt is '04:32
+'
+current position of the hands is 4 hours and 32 minutes
+going to move the hands 1 minutes
+running behind 0.5581 steps before turn
+running behind 0.9975 steps without correction
+0.1159 turns, 59 steps took 1 seconds
+moved hands
+hands.txt is '04:33'
+cumul_float_minutes is 1450.0000
+cumul_float_steps is 86246.9975
+cumul_actual_steps is 85550
+59.43945593 steps per minute
+1.05776298 correction
+hands = 273
+time = 274
+target position is 4 hours and 34 minutes
+hands.txt is '04:33
+'
+current position of the hands is 4 hours and 33 minutes
+going to move the hands 1 minutes
+running behind 0.9975 steps before turn
+running behind 1.4370 steps without correction
+running behind 0.4370 steps after correction
+0.1159 turns, 60 steps took 1 seconds
+moved hands
+hands.txt is '04:34'
+cumul_float_minutes is 1451.0000
+cumul_float_steps is 86306.4370
+cumul_actual_steps is 85609
+59.43945593 steps per minute
+1.05776298 correction
+hands = 338
+time = 274
+target position is 4 hours and 34 minutes
+hands.txt is '05:38
+'
+current position of the hands is 5 hours and 38 minutes
+going to move the hands 64 minutes
+running behind 0.4370 steps before turn
+running behind 0.5621 steps without correction
+7.4150 turns, 3804 steps took 21 seconds
+moved hands
+hands.txt is '04:34'
+cumul_float_minutes is 1515.0000
+cumul_float_steps is 90110.5621
+cumul_actual_steps is 89413
+59.43945593 steps per minute
+1.05776298 correction
+hands = 274
+time = 275
+target position is 4 hours and 35 minutes
+hands.txt is '04:34
+'
+current position of the hands is 4 hours and 34 minutes
+going to move the hands 1 minutes
+running behind 0.5621 steps before turn
+running behind 1.0016 steps without correction
+running behind 0.0016 steps after correction
+0.1159 turns, 60 steps took 1 seconds
+moved hands
+hands.txt is '04:35'
+cumul_float_minutes is 1516.0000
+cumul_float_steps is 90170.0016
+cumul_actual_steps is 89472
+59.43945593 steps per minute
+1.05776298 correction
+hands = 275
+time = 276
+target position is 4 hours and 36 minutes
+hands.txt is '04:35
+'
+current position of the hands is 4 hours and 35 minutes
+going to move the hands 1 minutes
+running behind 0.0016 steps before turn
+running behind 0.4411 steps without correction
+0.1159 turns, 59 steps took 1 seconds
+moved hands
+hands.txt is '04:36'
+cumul_float_minutes is 1517.0000
+cumul_float_steps is 90229.4411
+cumul_actual_steps is 89531
+59.43945593 steps per minute
+1.05776298 correction
+hands = 276
+time = 277
+target position is 4 hours and 37 minutes
+hands.txt is '04:36
+'
+current position of the hands is 4 hours and 36 minutes
+going to move the hands 1 minutes
+running behind 0.4411 steps before turn
+running behind 0.8805 steps without correction
+0.1159 turns, 59 steps took 1 seconds
+moved hands
+hands.txt is '04:37'
+cumul_float_minutes is 1518.0000
+cumul_float_steps is 90288.8805
+cumul_actual_steps is 89590
+59.43945593 steps per minute
+1.05776298 correction
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 0 seconds
+running behind 0.1935 steps before turn
+running behind 0.3871 steps without correction
+0.1095 turns, 56 steps took 0 seconds
+hands = 277
+time = 278
+target position is 4 hours and 38 minutes
+hands.txt is '04:37
+'
+current position of the hands is 4 hours and 37 minutes
+going to move the hands 1 minutes
+running behind 0.8805 steps before turn
+running behind 1.3200 steps without correction
+running behind 0.3200 steps after correction
+0.1159 turns, 60 steps took 1 seconds
+moved hands
+hands.txt is '04:38'
+cumul_float_minutes is 1519.0000
+cumul_float_steps is 90348.3200
+cumul_actual_steps is 89649
+59.43945593 steps per minute
+1.05776298 correction
+hands = 278
+time = 279
+target position is 4 hours and 39 minutes
+hands.txt is '04:38
+'
+current position of the hands is 4 hours and 38 minutes
+going to move the hands 1 minutes
+running behind 0.3200 steps before turn
+running behind 0.7594 steps without correction
+0.1159 turns, 59 steps took 1 seconds
+moved hands
+hands.txt is '04:39'
+cumul_float_minutes is 1520.0000
+cumul_float_steps is 90407.7594
+cumul_actual_steps is 89708
+59.43945593 steps per minute
+1.05776298 correction
