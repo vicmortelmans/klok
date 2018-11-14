@@ -39,6 +39,9 @@ while True:
 		print >> klok_lib.log, "current position of the hands is %d hours and %d minutes" % (clock_hour, clock_minute)
 		print >> klok_lib.log, "going to move the hands %d minutes" % difference
 		count = difference * klok_lib.quarter_turns_per_minute * klok_lib.quarter_turns_per_minute_correction / float(4)
+                print >> klok_lib.log, "quarter_turns_per_minute = %f" % klok_lib.quarter_turns_per_minute
+                print >> klok_lib.log, "quarter_turns_per_minute_correction = %f" % klok_lib.quarter_turns_per_minute_correction
+                print >> klok_lib.log, "count = %f" % count
 		klok_lib.turn(count, dir=direction)
 		steps = count * klok_lib.steps_per_turn
 		klok_lib.cumul_float_minutes += difference if dir else -difference
