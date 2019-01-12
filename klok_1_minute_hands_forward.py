@@ -15,5 +15,5 @@ offset_file.close()
 
 klok_lib.init()
 
-klok_lib.turn(klok_lib.quarter_turns_per_minute / float(4), brake=2)
-#klok_lib.turn(klok_lib.quarter_turns_per_minute / float(4), brake=2, dir=True)
+klok_lib.turn(klok_lib.quarter_turns_per_minute / float(4))
+#klok_lib.turn(klok_lib.quarter_turns_per_minute / float(4), dir=True)

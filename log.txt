@@ -1,1 +1,1219 @@
-
+hands = 561
+time = 558
+target position is 9 hours and 18 minutes
+hands.txt is '09:21
+'
+current position of the hands is 9 hours and 21 minutes
+going to move the hands 3 minutes
+quarter_turns_per_minute = 0.438127
+quarter_turns_per_minute_correction = 1.070363
+count = 0.351716
+running behind 0.0000 steps before turn
+running behind 0.4425 steps without correction
+0.3517 turns, 180 steps took 2 seconds
+moved hands
+hands.txt is '09:18'
+cumul_float_minutes is 3.0000
+cumul_float_steps is 180.4425
+cumul_actual_steps is 180
+60.14749163 steps per minute
+1.07036292 correction
+hands = 558
+time = 44
+target position is 0 hours and 44 minutes
+hands.txt is '09:18
+'
+current position of the hands is 9 hours and 18 minutes
+going to move the hands 206 minutes
+quarter_turns_per_minute = 0.438127
+quarter_turns_per_minute_correction = 1.070363
+count = 24.151179
+running behind 0.4425 steps before turn
+running behind 0.8258 steps without correction
+24.1512 turns, 12390 steps took 67 seconds
+moved hands
+hands.txt is '00:44'
+cumul_float_minutes is 209.0000
+cumul_float_steps is 12570.8258
+cumul_actual_steps is 12570
+60.14749163 steps per minute
+1.07036292 correction
+hands = 44
+time = 45
+target position is 0 hours and 45 minutes
+hands.txt is '00:44
+'
+current position of the hands is 0 hours and 44 minutes
+going to move the hands 1 minutes
+quarter_turns_per_minute = 0.438127
+quarter_turns_per_minute_correction = 1.070363
+count = 0.117239
+running behind 0.8258 steps before turn
+running behind 0.9732 steps without correction
+0.1172 turns, 60 steps took 1 seconds
+moved hands
+hands.txt is '00:45'
+cumul_float_minutes is 210.0000
+cumul_float_steps is 12630.9732
+cumul_actual_steps is 12630
+60.14749163 steps per minute
+1.07036292 correction
+hands = 45
+time = 46
+target position is 0 hours and 46 minutes
+hands.txt is '00:45
+'
+current position of the hands is 0 hours and 45 minutes
+going to move the hands 1 minutes
+quarter_turns_per_minute = 0.438127
+quarter_turns_per_minute_correction = 1.070363
+count = 0.117239
+running behind 0.9732 steps before turn
+running behind 1.1207 steps without correction
+running behind 0.1207 steps after correction
+0.1172 turns, 61 steps took 1 seconds
+moved hands
+hands.txt is '00:46'
+cumul_float_minutes is 211.0000
+cumul_float_steps is 12691.1207
+cumul_actual_steps is 12690
+60.14749163 steps per minute
+1.07036292 correction
+going to sound 3 chimes
+running behind 0.0000 steps before turn
+running behind 0.5172 steps without correction
+0.5000 turns, 256 steps took 4 seconds
+running behind 0.5172 steps before turn
+running behind 1.0343 steps without correction
+running behind 0.0343 steps after correction
+0.5000 turns, 257 steps took 4 seconds
+running behind 0.0343 steps before turn
+running behind 0.5515 steps without correction
+0.5000 turns, 256 steps took 4 seconds
+hands = 60
+time = 46
+target position is 0 hours and 46 minutes
+hands.txt is '01:00
+'
+current position of the hands is 1 hours and 0 minutes
+going to move the hands 14 minutes
+quarter_turns_per_minute = 0.438127
+quarter_turns_per_minute_correction = 1.070363
+count = 1.641342
+running behind 0.1207 steps before turn
+running behind 0.1856 steps without correction
+1.6413 turns, 842 steps took 5 seconds
+moved hands
+hands.txt is '00:46'
+cumul_float_minutes is 225.0000
+cumul_float_steps is 13533.1856
+cumul_actual_steps is 13532
+60.14749163 steps per minute
+1.07036292 correction
+going to sound 3 chimes
+running behind 0.5515 steps before turn
+running behind 1.0686 steps without correction
+running behind 0.0686 steps after correction
+0.5000 turns, 257 steps took 4 seconds
+running behind 0.0686 steps before turn
+running behind 0.5858 steps without correction
+0.5000 turns, 256 steps took 4 seconds
+running behind 0.5858 steps before turn
+running behind 1.1029 steps without correction
+running behind 0.1029 steps after correction
+0.5000 turns, 257 steps took 4 seconds
+hands = 46
+time = 47
+target position is 0 hours and 47 minutes
+hands.txt is '00:46
+'
+current position of the hands is 0 hours and 46 minutes
+going to move the hands 1 minutes
+quarter_turns_per_minute = 0.438127
+quarter_turns_per_minute_correction = 1.070363
+count = 0.117239
+running behind 0.1856 steps before turn
+running behind 0.3331 steps without correction
+0.1172 turns, 60 steps took 1 seconds
+moved hands
+hands.txt is '00:47'
+cumul_float_minutes is 226.0000
+cumul_float_steps is 13593.3331
+cumul_actual_steps is 13592
+60.14749163 steps per minute
+1.07036292 correction
+hands = 47
+time = 48
+target position is 0 hours and 48 minutes
+hands.txt is '00:47
+'
+current position of the hands is 0 hours and 47 minutes
+going to move the hands 1 minutes
+quarter_turns_per_minute = 0.438127
+quarter_turns_per_minute_correction = 1.070363
+count = 0.117239
+running behind 0.3331 steps before turn
+running behind 0.4806 steps without correction
+0.1172 turns, 60 steps took 1 seconds
+moved hands
+hands.txt is '00:48'
+cumul_float_minutes is 227.0000
+cumul_float_steps is 13653.4806
+cumul_actual_steps is 13652
+60.14749163 steps per minute
+1.07036292 correction
+hands = 48
+time = 55
+target position is 0 hours and 55 minutes
+hands.txt is '00:48
+'
+current position of the hands is 0 hours and 48 minutes
+going to move the hands 7 minutes
+quarter_turns_per_minute = 0.438127
+quarter_turns_per_minute_correction = 1.070363
+count = 0.820671
+running behind 0.0000 steps before turn
+running behind 0.0324 steps without correction
+0.8207 turns, 421 steps took 2 seconds
+moved hands
+hands.txt is '00:55'
+cumul_float_minutes is 7.0000
+cumul_float_steps is 421.0324
+cumul_actual_steps is 421
+60.14749163 steps per minute
+1.07036292 correction
+hands = 55
+time = 56
+target position is 0 hours and 56 minutes
+hands.txt is '00:55
+'
+current position of the hands is 0 hours and 55 minutes
+going to move the hands 1 minutes
+quarter_turns_per_minute = 0.438127
+quarter_turns_per_minute_correction = 1.070363
+count = 0.117239
+running behind 0.0324 steps before turn
+running behind 0.1799 steps without correction
+0.1172 turns, 60 steps took 1 seconds
+moved hands
+hands.txt is '00:56'
+cumul_float_minutes is 8.0000
+cumul_float_steps is 481.1799
+cumul_actual_steps is 481
+60.14749163 steps per minute
+1.07036292 correction
+hands = 56
+time = 57
+target position is 0 hours and 57 minutes
+hands.txt is '00:56
+'
+current position of the hands is 0 hours and 56 minutes
+going to move the hands 1 minutes
+quarter_turns_per_minute = 0.438127
+quarter_turns_per_minute_correction = 1.070363
+count = 0.117239
+running behind 0.1799 steps before turn
+running behind 0.3274 steps without correction
+0.1172 turns, 60 steps took 1 seconds
+moved hands
+hands.txt is '00:57'
+cumul_float_minutes is 9.0000
+cumul_float_steps is 541.3274
+cumul_actual_steps is 541
+60.14749163 steps per minute
+1.07036292 correction
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+hands = 57
+time = 58
+target position is 0 hours and 58 minutes
+hands.txt is '00:57
+'
+current position of the hands is 0 hours and 57 minutes
+going to move the hands 1 minutes
+quarter_turns_per_minute = 0.438127
+quarter_turns_per_minute_correction = 1.070363
+count = 0.117239
+running behind 0.3274 steps before turn
+running behind 0.4749 steps without correction
+0.1172 turns, 60 steps took 1 seconds
+moved hands
+hands.txt is '00:58'
+cumul_float_minutes is 10.0000
+cumul_float_steps is 601.4749
+cumul_actual_steps is 601
+60.14749163 steps per minute
+1.07036292 correction
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 1 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 4 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds
+running behind 0.0000 steps before turn
+running behind 0.1935 steps without correction
+0.1095 turns, 56 steps took 2 seconds

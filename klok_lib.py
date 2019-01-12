@@ -41,7 +41,7 @@ def init():
 	GPIO.setup(sleep, GPIO.OUT)
 
 
-def turn(count, brake=4, dir=False, step=hands_step):  # at brake=1 steps are missed
+def turn(count, brake=4, dir=False, step=hands_step):  # brake 4 reaches longer than brake 2 or brake 8
 	if count > 0:
 		GPIO.output(step, False)
 		GPIO.output(sleep, True)
@@ -54,11 +54,11 @@ def turn(count, brake=4, dir=False, step=hands_step):  # at brake=1 steps are mi
 			steps += 1
 			running_behind[step] -= 1
 			print >> log, "running behind %.4f steps after correction" % running_behind[step]
-		accelleration_brake = brake * 128
+		accelleration_brake = brake * 256
 		start = time.time()
 		for i in range(0, steps):
 			GPIO.output(step, True)
-			time.sleep(ms)
+			time.sleep(ms*brake)
 			GPIO.output(step, False)
 			time.sleep(ms*accelleration_brake)
 			if accelleration_brake > brake:
