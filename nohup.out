@@ -1,1 +1,21 @@
 
+/home/pi/Public/klok/klok_lib.py:37: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(hands_step, GPIO.OUT)
+/home/pi/Public/klok/klok_lib.py:38: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(chime_step, GPIO.OUT)
+/home/pi/Public/klok/klok_lib.py:39: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(bells_step, GPIO.OUT)
+/home/pi/Public/klok/klok_lib.py:40: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(hands_dir, GPIO.OUT)
+/home/pi/Public/klok/klok_lib.py:41: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(sleep, GPIO.OUT)
+/home/pi/Public/klok/klok_lib.py:37: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(hands_step, GPIO.OUT)
+/home/pi/Public/klok/klok_lib.py:38: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(chime_step, GPIO.OUT)
+/home/pi/Public/klok/klok_lib.py:39: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(bells_step, GPIO.OUT)
+/home/pi/Public/klok/klok_lib.py:40: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(hands_dir, GPIO.OUT)
+/home/pi/Public/klok/klok_lib.py:41: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(sleep, GPIO.OUT)
