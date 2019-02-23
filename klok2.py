@@ -65,13 +65,13 @@ while True:
 		chimes_count = (minute - 1) / 15 if minute > 1 else 4
 		print >> klok_lib.log, "going to sound %d chimes" % chimes_count
 		for i in range(0, chimes_count):
-			klok_lib.turn(0.5, brake=4, step=klok_lib.chime_step)
+			klok_lib.turn(0.5, brake=2, step=klok_lib.chime_step)
 		chime_done = True
 	if minute == 1 and not bells_done:
 		bells_count = hour if hour > 0 else 12
 		print >> klok_lib.log, "going to sound the bells %d times" % bells_count
 		time.sleep(1)
-                klok_lib.turn(bells_count, brake=2, step=klok_lib.bells_step)
+                klok_lib.turn(bells_count, brake=1, step=klok_lib.bells_step)
                 bells_done = True
 	klok_lib.log.flush()
 	os.fsync(klok_lib.log)
