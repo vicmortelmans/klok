@@ -1,0 +1,5 @@
+/var/www/
+/usr/lib/cgi-bin/
+/etc/lighttpd/
+/etc/init.d/lighttpd
+/lib/systemd/system/lighttpd.service

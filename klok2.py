@@ -9,6 +9,7 @@ klok_lib.init()
 
 chime_done = False
 bells_done = False
+klok_silence_file = '/tmp/klok-silence'
 while True:
 	klok_lib.calibrate()
 	now = datetime.datetime.now()
@@ -61,13 +62,13 @@ while True:
 		clock_hands_file.seek(0)
 		clock_hands_file.write(clock_hands_string)
 		clock_hands_file.close()
-	if minute in [1, 16, 31, 46] and not chime_done:
+	if minute in [1, 16, 31, 46] and not chime_done and not os.path.isfile(klok_silence_file):
 		chimes_count = (minute - 1) / 15 if minute > 1 else 4
 		print >> klok_lib.log, "going to sound %d chimes" % chimes_count
 		for i in range(0, chimes_count):
 			klok_lib.turn(0.5, brake=2, step=klok_lib.chime_step)
 		chime_done = True
-	if minute == 1 and not bells_done:
+	if minute == 1 and not bells_done and not os.path.isfile(klok_silence_file):
 		bells_count = hour if hour > 0 else 12
 		print >> klok_lib.log, "going to sound the bells %d times" % bells_count
 		time.sleep(1)
