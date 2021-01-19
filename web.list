@@ -1,5 +1,6 @@
 /var/www/
 /usr/lib/cgi-bin/
-/etc/lighttpd/
-/etc/init.d/lighttpd
+/etc/lighttpd/conf-available/10-cgi.conf
+/etc/lighttpd/conf-enabled
+/etc/lighttpd/lighttpd.conf
 /lib/systemd/system/lighttpd.service
