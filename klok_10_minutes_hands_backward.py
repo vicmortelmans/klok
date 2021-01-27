@@ -1,16 +1,8 @@
 import klok_lib
 
-
-offset_file = open('offset.txt', 'r+', 0)
-offset_file.seek(0)
-offset_string = offset_file.read()
-offset = int(offset_string)
+offset = int(klok_lib.read_string_from_file('offset.txt'))
 offset -= 10
-offset_string = str(offset)
-offset_file.seek(0)
-offset_file.truncate()
-offset_file.write(offset_string)
-offset_file.close()
+klok_lib.write_string_to_file('offset.txt', str(offset))
 
 klok_lib.init()
 

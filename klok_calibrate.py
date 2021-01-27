@@ -2,44 +2,23 @@ import klok_lib
 import calendar
 import time
 
+# read and reset offset
+offset = int(klok_lib.read_string_from_file('offset.txt'))  # [int min]
+new_offset = 0
+klok_lib.write_string_to_file('offset.txt', str(new_offset_string))
 
-offset_file = open('offset.txt', 'r+', 0)
-offset_file.seek(0)
-offset_string = offset_file.read()
-offset = int(offset_string)
-new_offset_string = str(0)
-offset_file.seek(0)
-offset_file.truncate()
-offset_file.write(new_offset_string)
-offset_file.close()
+# read time of last calibration, reset it and calculate minutes passed
+calibration = float(klok_lib.read_string_from_file('calibration.txt'))  # [int min last calibration since epoch]
+new_calibration = calendar.timegm(time.gmtime()) / 60.0  # [int min now since epoch]
+klok_lib.write_string_to_file('calibration.txt', str(new_calibration_string))
+minutes_since_calibration = new_calibration - calibration  # [int min]
 
+# read quarter_turns_per_minute_correction from file, calculate new correction and store it
+correction = float(klok_lib.read_string_from_file('correction.txt'))  # [float factor]
+new_correction = correction * (minutes_since_calibration + offset) / minutes_since_calibration  # [float factor]
+klok_lib.write_string_to_file('correction.txt', str(new_correction))
 
-calibration_file = open('calibration.txt', 'r+', 0)
-calibration_file.seek(0)
-calibration_string = calibration_file.read()
-calibration = float(calibration_string)
-new_calibration = calendar.timegm(time.gmtime()) / 60.0
-new_calibration_string = str(new_calibration)
-calibration_file.seek(0)
-calibration_file.truncate()
-calibration_file.write(new_calibration_string)
-calibration_file.close()
-minutes_since_calibration = new_calibration - calibration
-
-
-correction_file = open('correction.txt', 'r+', 0)
-correction_file.seek(0)
-correction_string = correction_file.read()
-correction = float(correction_string)
-new_correction = correction * (minutes_since_calibration + offset) / minutes_since_calibration
-new_correction_string = str(new_correction)
-correction_file.seek(0)
-correction_file.truncate()
-correction_file.write(new_correction_string)
-correction_file.close()
-
-print >> klok_lib.log, "Calibration offset: %s -> %s; calibration: %s -> %s; correction: %s -> %s" % (offset_string, new_offset_string, calibration_string, new_calibration_string, correction_string, new_correction_string)
+print >> klok_lib.log, "Calibration offset: %s -> %s; calibration: %s -> %s; correction: %s -> %s" % (str(offset), str(new_offset), str(calibration), str(new_calibration), str(correction), str(new_correction))
 
 klok_lib.init()
 klok_lib.turn(1, brake=2, step=klok_lib.bells_step)
-
