@@ -11,6 +11,7 @@ hands_dir = 12  # direction of motor driving the hands
 chime_step = 15  # step motor driving the chime (tune each 15')
 bells_step = 13  # step motor driving the bells (hour count)
 sleep = 11  # enable/disable motors
+IR_gpio = 16
 
 # constants
 ms = 0.001
@@ -57,6 +58,7 @@ def init():
 	GPIO.setup(bells_step, GPIO.OUT)
 	GPIO.setup(hands_dir, GPIO.OUT)
 	GPIO.setup(sleep, GPIO.OUT)
+        GPIO.setup(IR_gpio, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 
 def turn(count, brake=4, dir=False, step=hands_step):  # brake 4 reaches longer than brake 2 or brake 8
@@ -71,11 +73,10 @@ def turn(count, brake=4, dir=False, step=hands_step):  # brake 4 reaches longer 
                 # add one step if the accumulation of decimal steps reaches 1
 		print >> log, "running behind %.4f steps before turn" % running_behind[step]
                 running_behind[step] += count * steps_per_turn - steps  # [steps float] decimal part of steps (not performed)
-		print >> log, "running behind %.4f steps without correction" % running_behind[step]
                 if running_behind[step] > 1:
 			steps += 1  # [steps int]
 			running_behind[step] -= 1  # [steps float]
-			print >> log, "running behind %.4f steps after correction" % running_behind[step]
+			print >> log, "running behind %.4f steps after turn" % running_behind[step]
                 # initialize accelleration
 		accelleration_brake = brake * 256  # [ms int]
                 # initialize elapsed time
@@ -100,3 +101,15 @@ def turn(count, brake=4, dir=False, step=hands_step):  # brake 4 reaches longer 
 		print >> log, "no turns"
 
 
+def read_IR():
+    return GPIO.input(IR_gpio) 
+
+
+def path(a, b, maximum):
+    # calculate the shortest path from a to b in a cyclic range of number 0..maximum
+    forward = b - a
+    backward = b - a - maximum - 1 if b > a else b - a + maximum + 1
+    if abs(forward) < abs(backward):
+        return forward
+    else:
+        return backward
