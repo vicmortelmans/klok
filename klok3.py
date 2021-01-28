@@ -60,10 +60,11 @@ while True:
                         adjustment = 15  # just largest, since we're looking for the minimum
                         for ref_hour in range(12):
                                 for ref_minute in [12, 27, 42, 57]:
+                                        ref_hands = hands_from_hour_minute(ref_hour, ref_minute)
                                         ref_adjustment = klok_lib.path(ref_hands, assumed_clock_hands, 12*60-1)
                                         if abs(ref_adjustment) < abs(adjustment):
                                                 adjustment = ref_adjustment
-                                                clock_hands = hands_from_hour_minute(ref_hour, ref_minute)
+                                                clock_hands = ref_hands
                                                 clock_hands_string = string_from_hour_minute(ref_hour, ref_minute)
                         if adjustment:
                             # add the adjustment to offset.txt
