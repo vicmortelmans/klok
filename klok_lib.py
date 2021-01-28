@@ -44,7 +44,7 @@ def write_string_to_file(filename, string):
         file.close()
 
 
-def calibrate():
+def read_correction():
         # read quarter_turns_per_minute_correction from file correction.txt
 	global quarter_turns_per_minute_correction
 	quarter_turns_per_minute_correction = float(read_string_from_file('correction.txt'))  # [factor float]

@@ -1,7 +1,10 @@
 import klok_lib
+import RPi.GPIO as GPIO
 
 klok_lib.init()
+
+# 5 tones (actually 4 + silence)
 klok_lib.turn(0.5, brake=2, step=klok_lib.chime_step)
 
-#GPIO.cleanup()
+GPIO.output(klok_lib.sleep, False)
 
