@@ -50,6 +50,7 @@ while True:
         clock_hands = assumed_clock_hands
         clock_hands_string = assumed_clock_hands_string
         if not current_IR and previous_IR:
+                print >> klok_lib.log, "* * * " + str(now) + " * * *"
                 if startup:
                         print >> klok_lib.log, "ignoring first spoke after startup"
                         startup = False
@@ -81,12 +82,12 @@ while True:
 	direction = False if difference > 0 else True  # [boolean] when hands are behind, False, meaning to move forward
         difference = abs(difference)
 	if difference > 0:
-                print >> klok_lib.log, "*** summary ***"
-		print >> klok_lib.log, "assumed hands were %s" % assumed_clock_hands_string
+                print >> klok_lib.log, "* * * " + str(now) + " * * *"
+                print >> klok_lib.log, "assumed hands: %s" % assumed_clock_hands_string
                 if adjustment:
-                        print >> klok_lib.log, "spoke confirmed hands were %s" % clock_hands_string
-		print >> klok_lib.log, "going to move the hands %d minutes" % difference
-		print >> klok_lib.log, "new hands is %s" % hands_string
+                        print >> klok_lib.log, "spoke confirmed hands; %s" % clock_hands_string
+		print >> klok_lib.log, "going to move the hands %d minutes %s" % (difference, "backward" if direction else "forward")
+		print >> klok_lib.log, "new hands: %s" % hands_string
                 # calculate number of turns with correction applied
 		count = difference * klok_lib.quarter_turns_per_minute * klok_lib.quarter_turns_per_minute_correction / float(4)  # [turns float]
                 print >> klok_lib.log, "quarter_turns_per_minute = %f" % klok_lib.quarter_turns_per_minute
