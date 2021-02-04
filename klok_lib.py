@@ -14,7 +14,8 @@ sleep = 11  # enable/disable motors
 IR_gpio = 16
 
 # constants
-ms = 0.001
+ms = 0.001 # used to convert s to ms
+pulse = 0.0005 # [s] step signal duration
 steps_per_turn = 513.0343  # [steps float]
 quarter_turns_per_minute = 0.4381270354825263  # [turns float] default value, actual value if read from file
 
@@ -84,7 +85,7 @@ def turn(count, brake=4, dir=False, step=hands_step):  # brake 4 reaches longer 
                 # drive motor
 		for i in range(0, steps):
 			GPIO.output(step, True)
-			time.sleep(ms*brake)
+			time.sleep(pulse)
 			GPIO.output(step, False)
 			time.sleep(ms*accelleration_brake)
 			if accelleration_brake > brake:
