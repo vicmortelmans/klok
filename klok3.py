@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import klok_lib
 import klok_calibrate
+import logging
 import RPi.GPIO as GPIO
 import time
 import datetime
@@ -16,6 +17,9 @@ def hands_from_string(time):
 def string_from_hour_minute(hour, minute):
         return "%02d:%02d" % (hour % 12, minute)
 
+logging.basicConfig(format='[klok] %(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d %(funcName)s] %(message)s',
+        datefmt='%Y-%m-%d:%H:%M:%S',
+        level=logging.DEBUG)
 
 # initialize the GPIO
 klok_lib.init()
@@ -45,17 +49,17 @@ while True:
         assumed_clock_hands_string = klok_lib.read_string_from_file('hands.txt')  # [HH:MM string]
         assumed_clock_hands = hands_from_string(assumed_clock_hands_string)  # [0..12*60-1 minutes int]
         # check if the IR sensor sees a spoke and adjust hands if needed
-        current_IR = klok_lib.read_IR()
+        current_IR = klok_lib.read_IR()  # 1 when on spoke (or when sensors not aligned)
         adjustment = 0
         clock_hands = assumed_clock_hands
         clock_hands_string = assumed_clock_hands_string
-        if not current_IR and previous_IR:
-                print >> klok_lib.log, "* * * " + str(now) + " * * *"
+        if not current_IR and previous_IR:  # passed spoke
+                logging.info("* * * " + str(now) + " * * *")
                 if startup:
-                        print >> klok_lib.log, "ignoring first spoke after startup"
+                        logging.info("ignoring first spoke after startup")
                         startup = False
                 else:
-                        print >> klok_lib.log, "passing spoke at assumed %s" % assumed_clock_hands_string
+                        logging.info("passing spoke at assumed %s" % assumed_clock_hands_string)
                         # find the reference point nearest to the assumed hands position
                         # this is where (most probably) the hands actually are
                         adjustment = 15  # just largest, since we're looking for the minimum
@@ -72,9 +76,9 @@ while True:
                             offset = int(klok_lib.read_string_from_file('offset.txt'))
                             offset += adjustment
                             klok_lib.write_string_to_file('offset.txt', str(offset))
-                            print >> klok_lib.log, "passing spoke and adding %s minutes to offset" % str(adjustment)
+                            logging.info("passing spoke and adding %s minutes to offset" % str(adjustment))
                             if abs(offset) > 5:
-                                    print >> klok_lib.log, "offset |%s| > 5, so recalibrating the speed" % str(offset)
+                                    logging.info("offset |%s| > 5, so recalibrating the speed" % str(offset))
                                     klok_calibrate.calibrate()
         previous_IR = current_IR
         # calculate the shortest path to move the hands to actual time
@@ -82,20 +86,20 @@ while True:
 	direction = False if difference > 0 else True  # [boolean] when hands are behind, False, meaning to move forward
         difference = abs(difference)
 	if difference > 0:
-                print >> klok_lib.log, "* * * " + str(now) + " * * *"
-                print >> klok_lib.log, "assumed hands: %s" % assumed_clock_hands_string
+                logging.info("* * * " + str(now) + " * * *")
+                logging.info("assumed hands: %s" % assumed_clock_hands_string)
                 if adjustment:
-                        print >> klok_lib.log, "spoke confirmed hands; %s" % clock_hands_string
-		print >> klok_lib.log, "going to move the hands %d minutes %s" % (difference, "backward" if direction else "forward")
-		print >> klok_lib.log, "new hands: %s" % hands_string
+                        logging.info("spoke confirmed hands; %s" % clock_hands_string)
+		logging.info("going to move the hands %d minutes %s" % (difference, "backward" if direction else "forward"))
+		logging.info("new hands: %s" % hands_string)
                 # calculate number of turns with correction applied
 		count = difference * klok_lib.quarter_turns_per_minute * klok_lib.quarter_turns_per_minute_correction / float(4)  # [turns float]
-                print >> klok_lib.log, "quarter_turns_per_minute = %f" % klok_lib.quarter_turns_per_minute
-                print >> klok_lib.log, "quarter_turns_per_minute_correction = %f" % klok_lib.quarter_turns_per_minute_correction
-                print >> klok_lib.log, "count = %f" % count
+                logging.info("quarter_turns_per_minute = %f" % klok_lib.quarter_turns_per_minute)
+                logging.info("quarter_turns_per_minute_correction = %f" % klok_lib.quarter_turns_per_minute_correction)
+                logging.info("count = %f" % count)
                 # drive the motor for the hands
 		klok_lib.turn(count, dir=direction)
-		print >> klok_lib.log, "moved hands"
+		logging.info("moved hands")
                 # compose new assumed hands position string and write it to file
                 klok_lib.write_string_to_file('hands.txt', hands_string)
                 # allow sounds
@@ -103,13 +107,13 @@ while True:
 		bells_done = False
 	if minute in [0, 15, 30, 45] and not chime_done and not os.path.isfile(klok_silence_file):
 		chimes_count = minute / 15 if minute > 1 else 4
-		print >> klok_lib.log, "going to sound %d chimes" % chimes_count
+		logging.info("going to sound %d chimes" % chimes_count)
 		for i in range(0, chimes_count):
-			klok_lib.turn(0.5, brake=8, step=klok_lib.chime_step)
+			klok_lib.turn(0.5, brake=6, step=klok_lib.chime_step)
 		chime_done = True
 	if minute == 0 and not bells_done and not os.path.isfile(klok_silence_file):
 		bells_count = hour if hour > 0 else 12
-		print >> klok_lib.log, "going to sound the bells %d times" % bells_count
+		logging.info("going to sound the bells %d times" % bells_count)
 		time.sleep(1)
                 klok_lib.turn(bells_count, brake=2, step=klok_lib.bells_step)
                 bells_done = True
