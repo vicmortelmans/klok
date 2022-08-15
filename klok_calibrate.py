@@ -1,6 +1,7 @@
 import klok_lib
 import calendar
 import time
+import logging
 
 def calibrate():
     # read and reset offset
@@ -16,11 +17,10 @@ def calibrate():
 
     # read quarter_turns_per_minute_correction from file, calculate new correction and store it
     correction = float(klok_lib.read_string_from_file('correction.txt'))  # [float factor]
-    new_correction = correction * (minutes_since_calibration + offset) / minutes_since_calibration  # [float factor]
+    new_correction = correction * (1 + offset / minutes_since_calibration)  # [float factor]
     klok_lib.write_string_to_file('correction.txt', str(new_correction))
 
-    print >> klok_lib.log, "Calibration offset: %s -> %s; calibration: %s -> %s; correction: %s -> %s" % (str(offset), str(new_offset), str(calibration), str(new_calibration), str(correction), str(new_correction))
-
+    logging.info("Calibration offset: %s -> %s; calibration: %s -> %s; correction: %s -> %s (offset %s, min-since-last-cal %s)" % (str(offset), str(new_offset), str(calibration), str(new_calibration), str(correction), str(new_correction), str(offset), str(minutes_since_calibration)))
 
 klok_lib.init()
 calibrate()

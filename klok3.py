@@ -17,10 +17,6 @@ def hands_from_string(time):
 def string_from_hour_minute(hour, minute):
         return "%02d:%02d" % (hour % 12, minute)
 
-logging.basicConfig(format='[klok] %(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d %(funcName)s] %(message)s',
-        datefmt='%Y-%m-%d:%H:%M:%S',
-        level=logging.DEBUG)
-
 # initialize the GPIO
 klok_lib.init()
 
@@ -117,9 +113,7 @@ while True:
 		time.sleep(1)
                 klok_lib.turn(bells_count, brake=2, step=klok_lib.bells_step)
                 bells_done = True
-        # flush files and sleep
-	klok_lib.log.flush()
-	os.fsync(klok_lib.log)
+        # sleep
 	time.sleep(1)
 
 #GPIO.cleanup()
