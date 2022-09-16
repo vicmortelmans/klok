@@ -26,7 +26,7 @@ klok_silence_file = '/tmp/klok-silence'
 
 # start approx 1 sec eternal loop
 startup = True  # ignore the first IR down readout, it may be false
-previous_IR = True  
+count_current_IR_zero = 0
 #import pdb;pdb.set_trace()
 while True:
         # read quarter_turns_per_minute_correction factor from file
@@ -45,11 +45,16 @@ while True:
         assumed_clock_hands_string = klok_lib.read_string_from_file('hands.txt')  # [HH:MM string]
         assumed_clock_hands = hands_from_string(assumed_clock_hands_string)  # [0..12*60-1 minutes int]
         # check if the IR sensor sees a spoke and adjust hands if needed
-        current_IR = klok_lib.read_IR()  # 1 when on spoke (or when sensors not aligned)
+        current_IR = klok_lib.read_IR()  # 0 when on spoke (or when sensors not aligned)
+        logging.debug("Spoke reading: %s" % str(current_IR))
         adjustment = 0
         clock_hands = assumed_clock_hands
         clock_hands_string = assumed_clock_hands_string
-        if not current_IR and previous_IR:  # passed spoke
+        if not current_IR:
+            count_current_IR_zero += 1
+        else:
+            count_current_IR_zero = 0
+        if count_current_IR_zero == 3:  # passing spoke (taking 3 subsequent readings to ignore fluke zero's)
                 logging.info("* * * " + str(now) + " * * *")
                 if startup:
                         logging.info("ignoring first spoke after startup")
@@ -76,7 +81,6 @@ while True:
                             if abs(offset) > 5:
                                     logging.info("offset |%s| > 5, so recalibrating the speed" % str(offset))
                                     klok_calibrate.calibrate()
-        previous_IR = current_IR
         # calculate the shortest path to move the hands to actual time
         difference = klok_lib.path(clock_hands, hands, 12*60-1)  # [minutes int]
 	direction = False if difference > 0 else True  # [boolean] when hands are behind, False, meaning to move forward

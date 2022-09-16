@@ -15,15 +15,17 @@ def calibrate():
     klok_lib.write_string_to_file('calibration.txt', str(new_calibration))
     minutes_since_calibration = new_calibration - calibration  # [int min]
 
-    if minutes_since_calibration > 15:
-        # read quarter_turns_per_minute_correction from file, calculate new correction and store it
-        correction = float(klok_lib.read_string_from_file('correction.txt'))  # [float factor]
-        new_correction = correction * (1 + offset / minutes_since_calibration)  # [float factor]
-        klok_lib.write_string_to_file('correction.txt', str(new_correction))
+    # read quarter_turns_per_minute_correction from file, calculate new correction and store it
+    correction = float(klok_lib.read_string_from_file('correction.txt'))  # [float factor]
+    offset_correction = offset / minutes_since_calibration
+    offset_correction_cap = min(max(-0.1, offset_correction), 0.1)  # no corrections more than 10%
+    new_correction = correction * (1 + offset_correction_cap)  # [float factor]
 
-        logging.info("Calibration offset: %s -> %s; calibration: %s -> %s; correction: %s -> %s (offset %s, min-since-last-cal %s)" % (str(offset), str(new_offset), str(calibration), str(new_calibration), str(correction), str(new_correction), str(offset), str(minutes_since_calibration)))
-    else:
-        logging.warning("Only %s minutes since last calibration; ignoring offset of %s minutes (reset to 0)" % (minutes_since_calibration, offset))
+    klok_lib.write_string_to_file('correction.txt', str(new_correction))
+
+    logging.info("Calibration offset: %s -> %s; calibration: %s -> %s; correction: %s -> %s (offset %s, min-since-last-cal %s)" % (str(offset), str(new_offset), str(calibration), str(new_calibration), str(correction), str(new_correction), str(offset), str(minutes_since_calibration)))
+    if not offset_correction == offset_correction_cap:
+        logging.warning("Change of correction capped at 10 percent, was originally %s percent" % (str(offset_correction * 100)))
 
 
 if __name__ == "__main__":
