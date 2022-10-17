@@ -28,8 +28,6 @@ klok_silence_file = '/tmp/klok-silence'
 previous_on_spoke = None  
 now_on_spoke = None
 #import pdb;pdb.set_trace()
-assumed_clock_hands_string = ""  # initialization value
-clock_hands_string = ""  # initialization value
 while True:
         # read quarter_turns_per_minute_correction factor from file
         # note that this file is re-read in each loop, because it can
@@ -42,6 +40,8 @@ while True:
         hands = hands_from_hour_minute(hour, minute)  # [0..12*60-1 minutes int]
         hands_string = string_from_hour_minute(hour, minute)  # HH:MM
         # calculate the shortest path to move the hands to actual time
+        clock_hands_string = klok_lib.read_string_from_file('hands.txt')  # [HH:MM string]
+        clock_hands = hands_from_string(clock_hands_string)  # [0..12*60-1 minutes int]
         difference = klok_lib.path(clock_hands, hands, 12*60-1)  # [minutes int]
 	direction = False if difference > 0 else True  # [boolean] when hands are behind, False, meaning to move forward
         difference = abs(difference)
@@ -72,8 +72,8 @@ while True:
                 # be changed outside of this process!
                 assumed_clock_hands_string = klok_lib.read_string_from_file('hands.txt')  # [HH:MM string]
                 assumed_clock_hands = hands_from_string(assumed_clock_hands_string)  # [0..12*60-1 minutes int]
-                clock_hands = assumed_clock_hands
                 clock_hands_string = assumed_clock_hands_string
+                clock_hands = assumed_clock_hands
                 logging.info("assumed hands: %s" % assumed_clock_hands_string)
                 # calculate adjustment based on knowing we enter a spoke
                 if previous_on_spoke is not None and now_on_spoke is not None and not previous_on_spoke and now_on_spoke:
