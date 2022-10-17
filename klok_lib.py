@@ -108,6 +108,17 @@ def turn(count, brake=4, dir=False, step=hands_step):  # brake 4 reaches longer 
 def read_IR():
     return GPIO.input(IR_gpio) 
 
+def read_spoke():
+    # read IR_gpio ten times in a second; return:
+    #  - None if result is not stable
+    #  - True (1) or False (0) otherwise, whether or not on spoke
+    for i in range(10):
+        IR  = GPIO.input(IR_gpio)  # reads 0 when on spoke 
+        if i > 0 and IR != previous_IR:
+                return None
+        previous_IR = IR
+    return not IR  # returns True when on spoke
+
 
 def path(a, b, maximum):
     # calculate the shortest path from a to b in a cyclic range of number 0..maximum
