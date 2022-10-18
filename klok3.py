@@ -40,8 +40,12 @@ while True:
         hands = hands_from_hour_minute(hour, minute)  # [0..12*60-1 minutes int]
         hands_string = string_from_hour_minute(hour, minute)  # HH:MM
         # calculate the shortest path to move the hands to actual time
-        clock_hands_string = klok_lib.read_string_from_file('hands.txt')  # [HH:MM string]
-        clock_hands = hands_from_string(clock_hands_string)  # [0..12*60-1 minutes int]
+        try:
+            clock_hands
+        except NameError:
+            # only for first iteration, afterwards, clock_hands is set further on in loop
+            clock_hands_string = klok_lib.read_string_from_file('hands.txt')  # [HH:MM string]
+            clock_hands = hands_from_string(clock_hands_string)  # [0..12*60-1 minutes int]
         difference = klok_lib.path(clock_hands, hands, 12*60-1)  # [minutes int]
 	direction = False if difference > 0 else True  # [boolean] when hands are behind, False, meaning to move forward
         difference = abs(difference)
