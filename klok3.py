@@ -74,8 +74,8 @@ while True:
                                     if abs(ref_adjustment) < abs(adjustment):
                                             adjustment = ref_adjustment
                                             adjusted_hands = ref_hands
-                    if adjustment > 3:
-                        logging.warning("passing spoke and adjustment %s: IGNORING probably ghost reading" % str(adjustment))
+                    if adjustment > 5:
+                        logging.warning("passing spoke at assumed %s and adjustment %s: IGNORING probably ghost reading" % (hands, str(adjustment)))
                     elif adjustment > 0:
                         hands = adjusted_hands
                         # add the adjustment to offset.txt
@@ -84,12 +84,12 @@ while True:
                         klok_lib.write_string_to_file('offset.txt', str(offset))
                         logging.info("spoke confirmed hands; %s" % hands)
                         if abs(offset) > 5:
-                                logging.info("passing spoke and adding %s minutes to offset; offset |%s| > 5, so recalibrating the speed" % (str(adjustment), str(offset)))
+                                logging.info("passing spoke at assumed %s and adding %s minutes to offset; offset |%s| > 5, so recalibrating the speed" % (hands, str(adjustment), str(offset)))
                                 klok_calibrate.calibrate()
                         else:
-                                logging.info("passing spoke and adding %s minutes to offset" % str(adjustment))
+                                logging.info("passing spoke at assumed %s and adding %s minutes to offset" % (hands, str(adjustment)))
                     else:
-                        logging.info("passing spoke and no adjustment needed")
+                        logging.info("passing spoke at assumed %s and no adjustment needed (%s)" % (hands, str(adjustment)))
 
         # read quarter_turns_per_minute_correction factor from file
         # note that this file is re-read in each loop, because it can
