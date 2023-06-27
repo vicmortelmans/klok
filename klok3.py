@@ -62,7 +62,6 @@ while True:
             logging.info("assumed hands: %s" % hands)
             # calculate adjustment based on knowing we enter a spoke
             if previous_on_spoke is not None and now_on_spoke is not None and not previous_on_spoke and now_on_spoke:
-                    logging.info("passing spoke at assumed %s and target %s" % (hands, target))
                     # find the reference point nearest to the assumed hands position
                     # this is where (most probably) the hands actually are
                     adjustment = 15  # just largest, since we're looking for the minimum
@@ -74,9 +73,9 @@ while True:
                                     if abs(ref_adjustment) < abs(adjustment):
                                             adjustment = ref_adjustment
                                             adjusted_hands = ref_hands
-                    if adjustment > 5:
-                        logging.warning("passing spoke at assumed %s and adjustment %s: IGNORING probably ghost reading" % (hands, str(adjustment)))
-                    elif adjustment > 0:
+                    if abs(adjustment) > 5:
+                        logging.warning("passing spoke [12, 27, 42, 57] at assumed %s on target %s and adjustment %s: IGNORING probably ghost reading" % (hands, target, str(adjustment)))
+                    elif abs(adjustment) > 0:
                         hands = adjusted_hands
                         # add the adjustment to offset.txt
                         offset = int(klok_lib.read_string_from_file('offset.txt'))
@@ -84,12 +83,12 @@ while True:
                         klok_lib.write_string_to_file('offset.txt', str(offset))
                         logging.info("spoke confirmed hands; %s" % hands)
                         if abs(offset) > 5:
-                                logging.info("passing spoke at assumed %s and adding %s minutes to offset; offset |%s| > 5, so recalibrating the speed" % (hands, str(adjustment), str(offset)))
-                                klok_calibrate.calibrate()
+                                correction = klok_calibrate.calibrate()
+                                logging.info("passing spoke [12, 27, 42, 57] at assumed %s on target %s and adding %s minutes to offset: |%s| > 5, so recalibrating the speed to %s" % (hands, target, str(adjustment), str(offset), str(correction)))
                         else:
-                                logging.info("passing spoke at assumed %s and adding %s minutes to offset" % (hands, str(adjustment)))
+                                logging.info("passing spoke [12, 27, 42, 57] at assumed %s on target %s and adding %s minutes to offset: %s" % (hands, target, str(adjustment), str(offset)))
                     else:
-                        logging.info("passing spoke at assumed %s and no adjustment needed (%s)" % (hands, str(adjustment)))
+                        logging.info("passing spoke [12, 27, 42, 57] at assumed %s on target %s and no adjustment needed (%s)" % (hands, target, str(adjustment)))
 
         # read quarter_turns_per_minute_correction factor from file
         # note that this file is re-read in each loop, because it can

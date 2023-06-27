@@ -26,7 +26,7 @@ def calibrate():
     logging.info("Calibration offset: %s -> %s; calibration: %s -> %s; correction: %s -> %s (offset %s, min-since-last-cal %s)" % (str(offset), str(new_offset), str(calibration), str(new_calibration), str(correction), str(new_correction), str(offset), str(minutes_since_calibration)))
     if not offset_correction == offset_correction_cap:
         logging.warning("Change of correction capped at 10 percent, was originally %s percent" % (str(offset_correction * 100)))
-
+    return new_correction
 
 if __name__ == "__main__":
     klok_lib.init()
