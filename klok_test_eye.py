@@ -12,6 +12,6 @@ while True:
         print("I can see you!")
     else:
         print("Nothing here...")
-    #time.sleep(0.1)
-    time.sleep(12.0)
+    time.sleep(0.1)
+    #time.sleep(12.0)
 

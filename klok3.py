@@ -29,16 +29,17 @@ bells_done = False
 klok_silence_file = '/tmp/klok-silence'
 
 # start approx 1 sec eternal loop
-previous_on_spoke = None  
-now_on_spoke = None
+previous_on_spoke = False
+now_on_spoke = False
 hands_have_moved = False
 
 #import pdb;pdb.set_trace()
 while True:
+        # this loop runs approx. every second
         # in this loop:
-        # 1/ target text is the actual time ("HH:MM")
-        # 2/ hands {nr, text} is the (best guess) of the current position of the hands ("HH:MM")
-        #  - based on hands.txt
+        # 1/ target [text] is the actual time ("HH:MM")
+        # 2/ hands [{nr, text}] is the (best guess) of the current position of the hands ("HH:MM")
+        #  - based on hands.txt (so you can correct hands by writing their actual position to hands.txt)
         #  - adjusted to nearest spoke, if detected
 
         # get actual time
@@ -53,28 +54,28 @@ while True:
         # correct the estimation if the IR sensor sees a spoke
         if hands_have_moved:
             previous_on_spoke = now_on_spoke
-            spoke_status = klok_lib.read_spoke()
-            if spoke_status is not None:
-                now_on_spoke = spoke_status
+            spoke_reading = klok_lib.read_spoke()
+            if spoke_reading is not None:
+                now_on_spoke = spoke_reading
             else:
                 logging.info("spoke status is undefined, keeping old reading")
             logging.info("spoke reading: %s" % str(now_on_spoke))
             logging.info("assumed hands: %s" % hands)
             # calculate adjustment based on knowing we enter a spoke
-            if previous_on_spoke is not None and now_on_spoke is not None and not previous_on_spoke and now_on_spoke:
+            if not previous_on_spoke and now_on_spoke:
                     # find the reference point nearest to the assumed hands position
                     # this is where (most probably) the hands actually are
                     adjustment = 15  # just largest, since we're looking for the minimum
                     adjusted_hands = hands
                     for ref_hour in range(12):
-                            for ref_minute in [12, 27, 42, 57]:
+                            for ref_minute in [15, 30, 45, 00]:
                                     ref_hands = string_from_hour_minute(ref_hour, ref_minute)
                                     ref_adjustment = klok_lib.path(hands_from_string(ref_hands), hands_from_string(hands), 12*60-1)
                                     if abs(ref_adjustment) < abs(adjustment):
                                             adjustment = ref_adjustment
                                             adjusted_hands = ref_hands
                     if abs(adjustment) > 5:
-                        logging.warning("passing spoke [12, 27, 42, 57] at assumed %s on target %s and adjustment %s: IGNORING probably ghost reading" % (hands, target, str(adjustment)))
+                        logging.warning("passing spoke [15, 30, 45, 00] at assumed %s on target %s and adjustment %s: IGNORING probably ghost reading" % (hands, target, str(adjustment)))
                     elif abs(adjustment) > 0:
                         hands = adjusted_hands
                         # add the adjustment to offset.txt
