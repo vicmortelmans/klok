@@ -68,14 +68,14 @@ while True:
                     adjustment = 15  # just largest, since we're looking for the minimum
                     adjusted_hands = hands
                     for ref_hour in range(12):
-                            for ref_minute in [15, 30, 45, 00]:
+                            for ref_minute in [11, 26, 41, 56]:
                                     ref_hands = string_from_hour_minute(ref_hour, ref_minute)
                                     ref_adjustment = klok_lib.path(hands_from_string(ref_hands), hands_from_string(hands), 12*60-1)
                                     if abs(ref_adjustment) < abs(adjustment):
                                             adjustment = ref_adjustment
                                             adjusted_hands = ref_hands
                     if abs(adjustment) > 5:
-                        logging.warning("passing spoke [15, 30, 45, 00] at assumed %s on target %s and adjustment %s: IGNORING probably ghost reading" % (hands, target, str(adjustment)))
+                        logging.warning("passing spoke [11, 26, 41, 56] at assumed %s on target %s and adjustment %s: IGNORING probably ghost reading" % (hands, target, str(adjustment)))
                     elif abs(adjustment) > 0:
                         hands = adjusted_hands
                         # add the adjustment to offset.txt
@@ -85,9 +85,9 @@ while True:
                         logging.info("spoke confirmed hands; %s" % hands)
                         if abs(offset) > 5:
                                 correction = klok_calibrate.calibrate()
-                                logging.info("passing spoke [12, 27, 42, 57] at assumed %s on target %s and adding %s minutes to offset: |%s| > 5, so recalibrating the speed to %s" % (hands, target, str(adjustment), str(offset), str(correction)))
+                                logging.info("passing spoke [11, 26, 41, 56] at assumed %s on target %s and adding %s minutes to offset: |%s| > 5, so recalibrating the speed to %s" % (hands, target, str(adjustment), str(offset), str(correction)))
                         else:
-                                logging.info("passing spoke [12, 27, 42, 57] at assumed %s on target %s and adding %s minutes to offset: %s" % (hands, target, str(adjustment), str(offset)))
+                                logging.info("passing spoke [11, 26, 41, 56] at assumed %s on target %s and adding %s minutes to offset: %s" % (hands, target, str(adjustment), str(offset)))
                     else:
                         logging.info("passing spoke [12, 27, 42, 57] at assumed %s on target %s and no adjustment needed (%s)" % (hands, target, str(adjustment)))
 
@@ -124,7 +124,10 @@ while True:
 		chimes_count = minute / 15 if minute > 1 else 4
 		logging.info("going to sound %d chimes" % chimes_count)
 		for i in range(0, chimes_count):
-			klok_lib.turn(2.0, brake=3, step=klok_lib.chime_step)
+                        if minute is 0 and i is 0:  # TODO
+                                klok_lib.turn(2.0, brake=3, calibration_gpio=klok_lib.chime_calibration_gpio, calibration_value=10,  step=klok_lib.chime_step)  # TODO
+                        else:
+                                klok_lib.turn(2.0, brake=3, step=klok_lib.chime_step)
 		chime_done = True
 	if minute == 0 and not bells_done and not os.path.isfile(klok_silence_file):
 		bells_count = hour if hour > 0 else 12

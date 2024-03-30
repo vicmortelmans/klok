@@ -13,6 +13,7 @@ chime_step = 15  # step motor driving the chime (tune each 15')
 bells_step = 13  # step motor driving the bells (hour count)
 sleep = 11  # enable/disable motors
 IR_gpio = 16
+chime_calibration_gpio = 17  # microswitch  # TODO
 
 # constants
 ms = 0.001 # used to convert s to ms
@@ -64,9 +65,10 @@ def init():
     GPIO.setup(hands_dir, GPIO.OUT)
     GPIO.setup(sleep, GPIO.OUT)
     GPIO.setup(IR_gpio, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+    GPIO.setup(chime_calibration_gpio, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)  # TODO
 
 
-def turn(count, brake=4, dir=False, step=hands_step):  # brake 4 reaches longer than brake 2 or brake 8
+def turn(count, brake=4, calibration_gpio=None, calibration_point=None, dir=False, step=hands_step):  # brake 4 reaches longer than brake 2 or brake 8
     # count is a float saying how many turns the motor should make
     if count > 0:
         # initialize the motor for driving
@@ -87,13 +89,29 @@ def turn(count, brake=4, dir=False, step=hands_step):  # brake 4 reaches longer 
         # initialize elapsed time
         start = time.time()
         # drive motor
-        for i in range(0, steps):
+        i = 0
+        i_final = steps
+        calibrated = False
+        while True:
+            if not calibrated and  GPIO.input(calibration_gpio):
+                # calibration_point is a [0..1] float indicating the point during this run where the switch should be hit
+                i_calibration_point = calibration_point * i_final
+                # e.g. i_final = 100; i_calibration_point = 50; i = 30
+                #      then i_offset = -20
+                i_offset = i - i_calibration_point 
+                i_final += i_offset
+                calibrated = True
             GPIO.output(step, True)
             time.sleep(pulse)
             GPIO.output(step, False)
             time.sleep(ms*accelleration_brake)
             if accelleration_brake > brake:
                 accelleration_brake /= 2  # [ms int]
+            if i >= i_final:
+                break
+            else:
+                i += 1
+                continue
         # finish elapsed time
         end = time.time()
         # put motor to sleep
