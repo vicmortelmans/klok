@@ -13,7 +13,7 @@ chime_step = 15  # step motor driving the chime (tune each 15')
 bells_step = 13  # step motor driving the bells (hour count)
 sleep = 11  # enable/disable motors
 IR_gpio = 16
-chime_calibration_gpio = 17  # microswitch  # TODO
+#chime_calibration_gpio = 17  # microswitch  # TODO
 
 # constants
 ms = 0.001 # used to convert s to ms
@@ -65,7 +65,7 @@ def init():
     GPIO.setup(hands_dir, GPIO.OUT)
     GPIO.setup(sleep, GPIO.OUT)
     GPIO.setup(IR_gpio, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-    GPIO.setup(chime_calibration_gpio, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)  # TODO
+    #GPIO.setup(chime_calibration_gpio, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)  # TODO
 
 
 def turn(count, brake=4, calibration_gpio=None, calibration_point=None, dir=False, step=hands_step):  # brake 4 reaches longer than brake 2 or brake 8
@@ -91,16 +91,16 @@ def turn(count, brake=4, calibration_gpio=None, calibration_point=None, dir=Fals
         # drive motor
         i = 0
         i_final = steps
-        calibrated = False
+        #calibrated = False  # TODO
         while True:
-            if not calibrated and  GPIO.input(calibration_gpio):
-                # calibration_point is a [0..1] float indicating the point during this run where the switch should be hit
-                i_calibration_point = calibration_point * i_final
-                # e.g. i_final = 100; i_calibration_point = 50; i = 30
-                #      then i_offset = -20
-                i_offset = i - i_calibration_point 
-                i_final += i_offset
-                calibrated = True
+            #if not calibrated and  GPIO.input(calibration_gpio):  # TODO
+            #    # calibration_point is a [0..1] float indicating the point during this run where the switch should be hit
+            #    i_calibration_point = calibration_point * i_final
+            #    # e.g. i_final = 100; i_calibration_point = 50; i = 30
+            #    #      then i_offset = -20
+            #    i_offset = i - i_calibration_point 
+            #    i_final += i_offset
+            #    calibrated = True
             GPIO.output(step, True)
             time.sleep(pulse)
             GPIO.output(step, False)

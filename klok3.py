@@ -124,9 +124,9 @@ while True:
 		chimes_count = minute / 15 if minute > 1 else 4
 		logging.info("going to sound %d chimes" % chimes_count)
 		for i in range(0, chimes_count):
-                        if minute is 0 and i is 0:  # TODO
-                                klok_lib.turn(2.0, brake=3, calibration_gpio=klok_lib.chime_calibration_gpio, calibration_value=10,  step=klok_lib.chime_step)  # TODO
-                        else:
+                        #if minute is 0 and i is 0:  # TODO
+                        #        klok_lib.turn(2.0, brake=3, calibration_gpio=klok_lib.chime_calibration_gpio, calibration_value=10,  step=klok_lib.chime_step)  # TODO
+                        #else:
                                 klok_lib.turn(2.0, brake=3, step=klok_lib.chime_step)
 		chime_done = True
 	if minute == 0 and not bells_done and not os.path.isfile(klok_silence_file):
