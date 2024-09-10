@@ -11,4 +11,4 @@ tar cvf web.tar --exclude=".*" -T web.list --absolute-names
 
 Om de tar uit te pakken (opgelet: overschrijft systeembestanden!!)
 
-tar --absolute names -xvf web.tar
+sudo tar --absolute-names -xvf web.tar
