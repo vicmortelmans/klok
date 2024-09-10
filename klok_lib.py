@@ -1,32 +1,30 @@
-import RPi.GPIO as GPIO
+import os
 import time
 import datetime
-import os
 import logging
+import RPi.GPIO as GPIO
+from RpiMotorLib import RpiMotorLib
 
-os.chdir('/home/pi/Public/klok')
+os.chdir('/home/vic/klok')
 
-# GPIO pins
-hands_step = 7  # step motor driving the hands
-hands_dir = 12  # direction of motor driving the hands
-chime_step = 15  # step motor driving the chime (tune each 15')
-bells_step = 13  # step motor driving the bells (hour count)
-sleep = 11  # enable/disable motors
-IR_gpio = 16
-#chime_calibration_gpio = 17  # microswitch  # TODO
+gpioPins = {}
+gpioPins["bells"] = [0, 1, 5, 6]
+gpioPins["hands"] = [15, 17, 18, 27]
+gpioPins["chimes"] = [2, 3, 4, 14]
+gpioPin_eye = 23
+motor_driver = RpiMotorLib.BYJMotor("motor", "28BYJ")
 
 # constants
 ms = 0.001 # used to convert s to ms
-pulse = 0.0005 # [s] step signal duration
-steps_per_turn = 513.0343  # [steps float]
-quarter_turns_per_minute = 0.4381270354825263  # [turns float] default value, actual value if read from file
+steps_per_turn = 512.0  # [steps float]
+quarter_turns_per_minute = 0.440710  # [turns float] default value, actual value if read from file
 
 # corrections
 quarter_turns_per_minute_correction = 1  # [factor float]
 running_behind = {
-    hands_step: 0,  # [steps float] steps are discrete, so when advancing a non-integer number of steps,
-    chime_step: 0,  # [steps float] the decimal part is stored here (for each motor), and when it
-    bells_step: 0   # [steps float] reaches 1, an extra step is performed
+    "hands": 0,  # [steps float] steps are discrete, so when advancing a non-integer number of steps,
+    "chimes": 0,  # [steps float] the decimal part is stored here (for each motor), and when it
+    "bells": 0   # [steps float] reaches 1, an extra step is performed
 }
 
 logging.basicConfig(format='[klok] %(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d %(funcName)s] %(message)s',
@@ -58,64 +56,31 @@ def read_correction():
 
 def init():
     # initialize GPIO
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(hands_step, GPIO.OUT)
-    GPIO.setup(chime_step, GPIO.OUT)
-    GPIO.setup(bells_step, GPIO.OUT)
-    GPIO.setup(hands_dir, GPIO.OUT)
-    GPIO.setup(sleep, GPIO.OUT)
-    GPIO.setup(IR_gpio, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-    #GPIO.setup(chime_calibration_gpio, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)  # TODO
+    GPIO.setmode(GPIO.BCM)
+    for p in gpioPins["bells"] + gpioPins["hands"] + gpioPins["chimes"]: 
+        GPIO.setup(p, GPIO.OUT)
+    GPIO.setup(gpioPin_eye, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 
-def turn(count, brake=4, calibration_gpio=None, calibration_point=None, dir=False, step=hands_step):  # brake 4 reaches longer than brake 2 or brake 8
+def turn(count, dir=False, motor="hands"):
     # count is a float saying how many turns the motor should make
     if count > 0:
-        # initialize the motor for driving
-        GPIO.output(step, False)
-        GPIO.output(sleep, True)
-        GPIO.output(hands_dir, dir)
         # calculate the steps
         steps = int(count * steps_per_turn)  # [steps int]
         # add one step if the accumulation of decimal steps reaches 1
-        logging.info("running behind %.4f steps before turn" % running_behind[step])
-        running_behind[step] += count * steps_per_turn - steps  # [steps float] decimal part of steps (not performed)
-        if running_behind[step] > 1:
+        logging.info("running behind %.4f steps before turn" % running_behind[motor])
+        running_behind[motor] += count * steps_per_turn - steps  # [steps float] decimal part of steps (not performed)
+        if running_behind[motor] > 1:
             steps += 1  # [steps int]
-            running_behind[step] -= 1  # [steps float]
-            logging.info("running behind %.4f steps after turn" % running_behind[step])
-        # initialize accelleration
-        accelleration_brake = brake * 256  # [ms int]
+            running_behind[motor] -= 1  # [steps float]
+            logging.info("running behind %.4f steps after turn" % running_behind[motor])
         # initialize elapsed time
         start = time.time()
         # drive motor
-        i = 0
-        i_final = steps
-        #calibrated = False  # TODO
-        while True:
-            #if not calibrated and  GPIO.input(calibration_gpio):  # TODO
-            #    # calibration_point is a [0..1] float indicating the point during this run where the switch should be hit
-            #    i_calibration_point = calibration_point * i_final
-            #    # e.g. i_final = 100; i_calibration_point = 50; i = 30
-            #    #      then i_offset = -20
-            #    i_offset = i - i_calibration_point 
-            #    i_final += i_offset
-            #    calibrated = True
-            GPIO.output(step, True)
-            time.sleep(pulse)
-            GPIO.output(step, False)
-            time.sleep(ms*accelleration_brake)
-            if accelleration_brake > brake:
-                accelleration_brake /= 2  # [ms int]
-            if i >= i_final:
-                break
-            else:
-                i += 1
-                continue
+        # motor_run(GPIOPins, wait, steps, counterclockwise, verbose, steptype, initdelay)
+        motor_driver.motor_run(gpioPins[motor], 0.0010, steps, dir, False, "half", 0.001)
         # finish elapsed time
         end = time.time()
-        # put motor to sleep
-        GPIO.output(sleep, False)
         # calculate elapsed time
         elapsed = end - start  # [s float]
         logging.info("%.4f turns, %d steps took %d seconds" % (count, steps, elapsed))
@@ -124,18 +89,10 @@ def turn(count, brake=4, calibration_gpio=None, calibration_point=None, dir=Fals
 
 
 def read_IR():
-    return GPIO.input(IR_gpio) 
+    return GPIO.input(gpioPin_eye) 
 
 def read_spoke():
-    # read IR_gpio ten times in a second; return:
-    #  - None if result is not stable
-    #  - True (1) or False (0) otherwise, whether or not on spoke
-    for i in range(10):
-        IR  = GPIO.input(IR_gpio)  # reads 0 when on spoke 
-        if i > 0 and IR != previous_IR:
-            logging.warning("Unstable eye reading")
-            return None
-        previous_IR = IR
+    IR  = GPIO.input(gpioPin_eye)  # reads 0 when on spoke 
     return not IR  # returns True when on spoke
 
 
