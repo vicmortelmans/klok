@@ -13,6 +13,13 @@ gpioPins["hands"] = [15, 17, 18, 27]
 gpioPins["chimes"] = [2, 3, 4, 14]
 gpioPin_eye = 23
 motor_driver = RpiMotorLib.BYJMotor("motor", "28BYJ")
+MIDI2PIN = {
+        60: 7,
+        64: 10,
+        69: 8,
+        71: 9,
+        84: 11
+        }
 
 # constants
 ms = 0.001 # used to convert s to ms
@@ -33,7 +40,7 @@ logging.basicConfig(format='[klok] %(asctime)s,%(msecs)d %(levelname)-8s [%(file
 
 
 def read_string_from_file(filename):
-    file = open(filename, 'r+', 0)
+    file = open(filename, 'r+')
     file.seek(0)
     string = file.read()
     file.close()
@@ -41,7 +48,7 @@ def read_string_from_file(filename):
 
 
 def write_string_to_file(filename, string):
-    file = open(filename, "r+", 0)
+    file = open(filename, "r+")
     file.seek(0)
     file.truncate()
     file.write(string)
@@ -60,6 +67,9 @@ def init():
     for p in gpioPins["bells"] + gpioPins["hands"] + gpioPins["chimes"]: 
         GPIO.setup(p, GPIO.OUT)
     GPIO.setup(gpioPin_eye, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+    for p in list(MIDI2PIN.values()):
+        GPIO.setup(p, GPIO.OUT)
+        GPIO.output(p, False)
 
 
 def turn(count, dir=False, motor="hands"):
@@ -94,6 +104,14 @@ def read_IR():
 def read_spoke():
     IR  = GPIO.input(gpioPin_eye)  # reads 0 when on spoke 
     return not IR  # returns True when on spoke
+
+def play_solenoid(note):
+    pin = MIDI2PIN[note]
+    # Toggle the pin state
+    GPIO.output(pin, True)
+    print("PIN %s triggered" % pin)
+    time.sleep(0.06)
+    GPIO.output(pin, False)
 
 
 def path(a, b, maximum):

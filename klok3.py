@@ -1,7 +1,8 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 import klok_lib
 import klok_calibrate
 import logging
+import mido
 import time
 import datetime
 import os
@@ -117,17 +118,21 @@ while True:
     else:
         hands_have_moved = False
     if minute in [0, 15, 30, 45] and not chime_done and not os.path.isfile(klok_silence_file):
-        chimes_count = minute / 15 if minute > 1 else 4
+        chimes_count = minute // 15 if minute > 1 else 4
         logging.info("going to sound %d chimes" % chimes_count)
         for i in range(0, chimes_count):
-            klok_lib.turn(2.0, motor="chimes")
+            klok_lib.turn(0.5, motor="chimes")
         chime_done = True
     if minute == 0 and not bells_done and not os.path.isfile(klok_silence_file):
         bells_count = hour if hour > 0 else 12
         logging.info("going to sound the bells %d times" % bells_count)
         time.sleep(1)
-        klok_lib.turn(bells_count, motor="bells")
+        klok_lib.turn(bells_count, dir=True, motor="bells")
         bells_done = True
+        mid = mido.MidiFile('hour1.mid')
+        for msg in mid.play():
+            if msg.type == 'note_on':
+                klok_lib.play_solenoid(msg.note)
     # sleep
     time.sleep(1)
 
