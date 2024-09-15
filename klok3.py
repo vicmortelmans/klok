@@ -122,6 +122,7 @@ while True:
         logging.info("going to sound %d chimes" % chimes_count)
         for i in range(0, chimes_count):
             klok_lib.turn(0.5, motor="chimes")
+            time.sleep(0.3)
         chime_done = True
     if minute == 0 and not bells_done and not os.path.isfile(klok_silence_file):
         bells_count = hour if hour > 0 else 12
