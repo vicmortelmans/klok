@@ -109,7 +109,7 @@ def play_solenoid(note):
     pin = MIDI2PIN[note]
     # Toggle the pin state
     GPIO.output(pin, True)
-    print("PIN %s triggered" % pin)
+    #print("PIN %s triggered" % pin)
     time.sleep(0.02)
     GPIO.output(pin, False)
 
