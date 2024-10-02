@@ -1,12 +1,12 @@
 X:1
-T:Flash Harmony
+T:Flash Harmony (Revised)
 C:Composed by ChatGPT
 M:4/4
 L:1/16
-Q:1/4=300
+Q:1/4=60
 K:Cmaj
-[V:1] C2 E2 A2 B2 | c'E c'A B2 c'2 |
-[V:2] C,2 E,2 A,2 C2 | E2 A E2 C2 |
-[V:1] c'4 E4 | A2 B2 c'2 E2 |
-[V:2] E,4 C4 | E2 A,2 B,2 A,2 |
+[V:1] C2 E2 A2 B2 | c' E A B c'2 |
+[V:2] C2 E2 A2 B2 | A B C E A2 |
+[V:1] C4 E4 | A2 B2 c'2 E2 |
+[V:2] E4 A4 | B2 C2 A2 E2 |
 
