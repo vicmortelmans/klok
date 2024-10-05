@@ -128,7 +128,7 @@ while True:
         bells_count = hour if hour > 0 else 12
         logging.info("going to sound the bells %d times" % bells_count)
         time.sleep(1)
-        klok_lib.turn(bells_count, dir=True, motor="bells")
+        klok_lib.turn(bells_count/3, dir=True, motor="bells")
         bells_done = True
         mid = mido.MidiFile('hour1.mid')
         for msg in mid.play():
