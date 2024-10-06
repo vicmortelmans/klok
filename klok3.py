@@ -130,6 +130,7 @@ while True:
         time.sleep(1)
         klok_lib.turn(bells_count/3, dir=True, motor="bells")
         bells_done = True
+        time.sleep(1)
         mid = mido.MidiFile('hour1.mid')
         for msg in mid.play():
             if msg.type == 'note_on':
