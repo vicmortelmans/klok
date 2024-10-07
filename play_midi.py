@@ -6,7 +6,7 @@ import mido
 # initialize the GPIO
 klok_lib.init()
 
-mid = mido.MidiFile('flash1.mid')
+mid = mido.MidiFile('hour1.mid')
 for msg in mid.play():
     if msg.type == 'note_on':
         print(msg.note)

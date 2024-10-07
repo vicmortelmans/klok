@@ -106,12 +106,16 @@ def read_spoke():
     return not IR  # returns True when on spoke
 
 def play_solenoid(note):
-    pin = MIDI2PIN[note]
-    # Toggle the pin state
-    GPIO.output(pin, True)
-    #print("PIN %s triggered" % pin)
-    time.sleep(0.02)
-    GPIO.output(pin, False)
+    try:
+        pin = MIDI2PIN[note]
+        # Toggle the pin state
+        GPIO.output(pin, True)
+        #print("PIN %s triggered" % pin)
+        time.sleep(0.02)
+        GPIO.output(pin, False)
+    except Exception:
+        # probably KeyError
+        pass
 
 
 def path(a, b, maximum):
