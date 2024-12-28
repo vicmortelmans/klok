@@ -6,5 +6,3 @@ klok_lib.init()
 # 5 tones (actually 4 + silence)
 klok_lib.turn(0.5, motor="chimes")
 
-GPIO.output(klok_lib.sleep, False)
-

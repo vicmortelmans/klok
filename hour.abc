@@ -1,10 +1,10 @@
 X:1
-T:Velocity Fusion
+T:Whirlwind Waltz
 C:Composed by ChatGPT
-M:4/4
-L:1/16
-Q:1/4=56
+M:3/4
+L:1/8
+Q:1/4=36
 K:Cmaj
-[V:1] c'4 A2 B E2 | B,2 c' E A,2 | C2 E A B2 | c'4 E2 A2 |
-[V:2] B2 A E2 C | E2 A B A2 | c'4 E2 A,2 | C2 A2 B2 E2 |
+[V:1] C2 E A B | c' E A B | c'2 E2 A2 |
+[V:2] E2 C B c' | E A B c' | E2 A2 C2 |
 
